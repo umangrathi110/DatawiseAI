@@ -1,0 +1,82 @@
+.rightPane {
+  flex: 1;
+  margin-left: 10px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+}
+
+.heading {
+  margin-top: 2px;
+  color: #00e1ff;
+  z-index: 5 ; 
+  position: relative; 
+}
+
+.result {
+  flex: 1; 
+  margin-top: -4px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow-y: auto; 
+  position: relative; /* Ensure proper stacking with loader */
+}
+
+.query-response {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stack query and answer vertically */
+}
+
+.query {
+  align-self: flex-end; /* Align query to the right */
+  background-color: #00e1ff;
+  color: #000;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 60%;
+  word-break: break-word;
+}
+
+.answer {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-break: break-word;
+}
+ 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute; /* Overlay the loader */
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(3px); /* Reduced blur effect */
+  z-index: 10; /* Ensure it appears on top */
+}
+
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #00e1ff; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
