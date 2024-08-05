@@ -16,7 +16,7 @@ const RightPane = ({ history, loading }) => {
           return newTexts;
         });
         index++;
-        if (index === latestResponse.length) clearInterval(interval);
+        if (index + 1 === latestResponse.length) clearInterval(interval);
       }, 10);
       return () => clearInterval(interval);
     }
